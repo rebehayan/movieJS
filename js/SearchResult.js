@@ -1,3 +1,4 @@
+import { FavMovies } from "./FavMovies.js";
 import { FetchTitle } from "./Fetch.js";
 import { RenderList } from "./RenderList.js";
 import { UrlParams } from "./UrlParams.js";
@@ -25,11 +26,18 @@ const handleMoreButton = (Resultlength) => {
 export const SearchResult = () => {
   const obj = UrlParams();
 
+  const textEl = document.querySelector(".result-text strong");
+
+  if (!textEl) return;
+
+  textEl.textContent = obj.keyword;
+
   FetchTitle(obj.keyword).then((response) => {
     const Resultlength = response.totalResults;
 
     RenderList(".search-result", response.Search); // 리스트 데이터바인딩
     handleMoreButton(Resultlength); // 더보기 버튼
+    FavMovies();
   });
 
   goBack(); // 뒤로가기

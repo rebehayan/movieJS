@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="영화상세보기" />
-  <title>영화상세보기</title>
-  <meta property="og:type" content="페이지유형" />
-  <meta property="og:site_name" content="사이트의 이름" />
-  <meta property="og:title" content="페이지 이름" />
-  <meta property="og:description" content="페이지 설명" />
+  <meta name="description" content="영화검색사이트트" />
+  <title>SearchMovies</title>
+  <meta property="og:type" content="responsive, web, mobile" />
+  <meta property="og:site_name" content="SearchMovies" />
+  <meta property="og:title" content="first page" />
+  <meta property="og:description" content="You can search for movies." />
   <meta property="og:image" content="페이지 대표이미지" />
-  <meta property="og:url" content="페이지 주소" />
+  <meta property="og:url" content="movie-js-nine.vercel.app/" />
   <link rel="stylesheet" href="../css/index.css" />
   <script type="module" src="../js/index.js"></script>
 </head>
@@ -28,18 +28,15 @@
         <button aria-label="검색"></button>
       </fieldset>
     </form>
-    <a href="">About</a>
+    <div>
+      <a href="">About</a>
+      <a href="./pages/fav.html">Favorites</a>
+
+    </div>
   </header>
   <main>
-    <div class="detail-wrap">
-      <button class="btn-prev" aria-label="Previous Page"></button>
-      <div class="movie-detail"></div>
-    </div>
-
+    <ul class="my-fav-list search-result"></ul>
   </main>
-  <footer class="footer">
-    @2025 Rebehayan.com All Right Reserves
-  </footer>
 </body>
 
 </html>
