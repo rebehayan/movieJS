@@ -1,5 +1,5 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-import { FetchArray } from "./Fetch.js";
+import { FetchArray } from "../api/Fetch.js";
 import { RenderSlide } from "./RenderSlide.js";
 
 export const MainSlide = () => {

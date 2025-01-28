@@ -1,13 +1,11 @@
-import { Search } from "./Search.js";
-import { SearchResult } from "./SearchResult.js";
-import { RenderList } from "./RenderList.js";
-import { RenderDetail } from "./RenderDetail.js";
-import { MainSlide } from "./MainSlide.js";
-import { RenderFav } from "./RenderFav.js";
+import { Search } from "./components/Search.js";
+import { SearchResult } from "./components/SearchResult.js";
+import { Detail } from "./components/Detail.js";
+import { MainSlide } from "./components/MainSlide.js";
+import { RenderFav } from "./components/RenderFav.js";
 
 Search();
 SearchResult();
-RenderList();
-RenderDetail();
+Detail();
 MainSlide();
 RenderFav();

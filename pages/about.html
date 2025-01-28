@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="영화검색사이트">
+  <title>ABOUT - SearchMovies</title>
+  <meta property="og:type" content="페이지유형">
+  <meta property="og:site_name" content="사이트의 이름">
+  <meta property="og:title" content="페이지 이름">
+  <meta property="og:description" content="페이지 설명">
+  <meta property="og:image" content="페이지 대표이미지">
+  <meta property="og:url" content="페이지 주소">
+  <link rel="stylesheet" href="/css/index.css" />
+  <script type="module" src="/js/index.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="logo">
+      <a href="/"><img src="../images/logo.svg" alt="" /></a>
+    </h1>
+    <form class="search">
+      <fieldset>
+        <legend>영화검색</legend>
+        <input type="search" placeholder="What do you want to watch?" />
+        <button aria-label="검색"></button>
+      </fieldset>
+    </form>
+    <div>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/fav.html">Favorites</a>
+
+    </div>
+  </header>
+  <main>
+    <div class="about">
+      <div class="about-visual mxauto">
+        <div class="text">
+          <h2>
+            <span>Build</span>
+            <span>Inspire</span>
+            <span>Educate</span>
+          </h2>
+          <a href="mailto:rebehayan@gmail.com" data-tooltip="rebehayan@gmail.com"
+            class="btn-contact">강의문의<span>Go</span></a>
+        </div>
+        <div class="video">
+          <div data-title="Project">
+            <div class="info">
+              Since 2000<br>
+              Project
+            </div>
+            <div class="count"><span>450<i>++</i></span>프로젝트 진행</div>
+          </div>
+          <div data-title="Inspire">
+            <div class="info">
+              Since 2016<br>
+              Inspire
+            </div>
+            <div class="count"><span>790<i>++</i></span>유튜브 영상</div>
+          </div>
+          <div data-title="Educate">
+            <div class="info">
+              Since 2009<br>
+              Educate
+            </div>
+            <div class="count"><span>100<i>++</i></span>강의 진행</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-header">
+        <div>
+          <h2>About Us</h2>
+          <p>안녕하세요, <strong>리베하얀</strong>입니다.<br>
+            Javascript와 영화 API를 기반으로 제작한 간단한 영화 검색웹사이트를 구현했습니다.<br>
+            해당 사이트는 오프라인 강의 자료로서 활용되고 있으며<br>
+            검색 기능, 영화 상세 정보 제공, 즐겨찾기 등을 제공하고 있습니다.</p>
+        </div>
+      </div>
+      <div class="about-site">
+        <div>
+          <div class="top">
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
+          <div class="btm">
+            <div class="left">
+              <img src="../images/rebehayan_profile.png" alt="리베하얀">
+            </div>
+            <div class="right">
+              <p>
+                이 사이트는 사용자가 손쉽게 영화를 검색하고 상세 정보를 확인할 수 있도록 설계되었습니다.<br>
+                "최신 영화, 인기 영화, 그리고 추천작을 손쉽게 찾아보세요."
+              </p>
+              <h3>주요 기능</h3>
+              <ul>
+                <li>검색 기능 : 원하는 영화를 검색</li>
+                <li>상세 정보 제공 : 줄거리, 감독, 배우 등 영화 데이터 제공</li>
+                <li>즐겨찾기 : 세션스토리지를 활용한 즐겨찾기</li>
+              </ul>
+              <h3>개발자</h3>
+              <ul>
+                <li>닉네임: 립의 하얀</li>
+                <li>전문 분야: 웹퍼블리싱 및 프론트엔드 개발</li>
+                <li>특징: 23년 경력의 웹 퍼블리셔</li>
+              </ul>
+              <h3>강의</h3>
+              <ul>
+                <li>JavaScript 기반의 영화 사이트 제작 강의</li>
+                <li>실무 활용도를 높이는 프로젝트 중심 강의</li>
+                <li>직관적이고 사용하기 쉬운 강의 자료 제공</li>
+              </ul>
+              <h3>기술 스택</h3>
+              <div class="item-group">
+                <div class="item">HTML</div>
+                <div class="item">CSS</div>
+                <div class="item">JavaScript</div>
+                <div class="item">OMDB API</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
