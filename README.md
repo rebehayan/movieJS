@@ -1,4 +1,4 @@
-<img src="https://movie-js-nine.vercel.app/images/animation.svg" alt="rebehayan" />
+<img src="https://movie-js-nine.vercel.app/images/animation.svg" alt="rebehayan" width="100%" />
 
 ### 🙏🏻 안녕하세요, I'm Rebehayan
 ---
