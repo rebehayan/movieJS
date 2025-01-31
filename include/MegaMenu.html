@@ -2,12 +2,22 @@
   <nav>
     <a href="/">Home</a>
   </nav>
-  <button type="button" class="btn-close">Close</button>
+  <button type="button" class="btn-close">
+    Close
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+      <path fill="currentColor" d="m37.304 11.282l1.414 1.414l-26.022 26.02l-1.414-1.413z" />
+      <path fill="currentColor" d="m12.696 11.282l26.022 26.02l-1.414 1.415l-26.022-26.02z" />
+    </svg>
+  </button>
   <style>
-    @media (width < 1024px) {
-      @scope {
-        :scope {}
+    @scope {
+      :scope {
+        text-align: center;
+        height: 100%;
+      }
 
+      .gnb {
+        justify-self: center;
       }
     }
 
@@ -30,14 +40,41 @@
       }
 
       nav {
-        display: grid;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        translate: 0 -5rem;
 
         a {
           color: #fff;
-          font-size: 1.8rem;
+          font-size: 3rem;
+          font-weight: 400;
+          line-height: 2;
           text-decoration: none;
+          opacity: 0.3;
+          transition: .4s;
+
+          &:hover {
+            opacity: 1;
+          }
         }
+      }
+    }
+
+    .btn-close {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1.8rem;
+      position: absolute;
+      inset: 2rem 2rem auto auto;
+
+      svg {
+        width: 3rem;
+        aspect-ratio: 1;
       }
     }
   </style>

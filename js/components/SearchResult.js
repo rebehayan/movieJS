@@ -6,13 +6,30 @@ import { goBack } from "./Navigation.js";
 import { LoadingEnd, LoadingStart } from "../utils/Loading.js";
 
 // 더보기
-const handleMoreButton = (Resultlength) => {
+let currentPage = 1;
+const handleMoreButton = (response, keyword) => {
+  const Resultlength = response.totalResults;
+
   if (Resultlength > 10) {
     const list = document.querySelector(".search-result");
 
     if (!list) return;
 
     list.insertAdjacentHTML("afterend", `<button class='btn-more'>더보기</button>`);
+
+    const more = document.querySelector(".btn-more");
+    more.addEventListener("click", async () => {
+      currentPage++;
+
+      const response = await FetchTitle(keyword, currentPage);
+      console.log(response);
+      RenderList(".search-result", response.Search); // 리스트 데이터바인딩
+
+      // 전체 결과 개수보다 많아지면 버튼 숨김
+      if (currentPage * 10 >= Resultlength) {
+        more.style.display = "none";
+      }
+    });
   }
 };
 
@@ -32,11 +49,10 @@ export const SearchResult = async () => {
 
   try {
     const response = await FetchTitle(obj.keyword);
-    const Resultlength = response.totalResults;
 
     if (response.Response === "True") {
       RenderList(".search-result", response.Search); // 리스트 데이터바인딩
-      handleMoreButton(Resultlength); // 더보기 버튼
+      handleMoreButton(response, obj.keyword); // 더보기 버튼
       FavMovies(); //즐겨찾기등록
     } else {
       NoResultRender(".result-text", "no-result", "검색결과가 없습니다.");

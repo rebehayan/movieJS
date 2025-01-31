@@ -9,7 +9,7 @@ import { Megamenu } from "./components/Megamenu.js";
 
 const init = async () => {
   await HTMLInclude("/include/MegaMenu.html", "#megamenu");
-  await Megamenu();
+  Megamenu();
 
   Search();
   SearchResult();
