@@ -1,5 +1,3 @@
-import { LoadingEnd, LoadingStart } from "../utils/Loading.js";
-
 export const FetchTitle = async (keyword, page = 1) => {
   try {
     const response = await fetch(`https://omdbapi.com/?apikey=6471fda5&s=${keyword}&page=${page}`);

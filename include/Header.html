@@ -1,7 +1,7 @@
 <h1 class="logo">
   <a href="/"><img src="../images/logo.svg" alt="" /></a>
 </h1>
-<form class="search">
+<form class="search" id="search">
   <fieldset>
     <legend>영화검색</legend>
     <input type="search" placeholder="What do you want to watch?" />
@@ -23,6 +23,10 @@
 
         @media (width < 1024px) {
           display: none;
+
+          #megamenu & {
+            display: block;
+          }
         }
       }
 
@@ -61,7 +65,6 @@
   <a href="/pages/fav.html">Favorites</a>
   <button class="btn-menu" aria-label="전체메뉴"></button>
 </div>
-<div id="megamenu"></div>
 <style>
   @scope (.header) {
     :scope {

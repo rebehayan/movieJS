@@ -52,7 +52,7 @@ fieldset {
   }
 }
 
-:is(.mxauto, .header, .about-header > div, .detail-wrap) {
+:is(.mxauto, .header, .about-header > div, .detail-wrap, .main-slide .information) {
   width: 160rem;
   margin-inline: auto;
   @media (width < 720px) {
@@ -88,16 +88,18 @@ fieldset {
     justify-content: center;
     align-items: start;
     gap: 3rem;
-    width: 160rem;
-    margin-inline: auto;
     height: 100vh;
     height: 100dvh;
+    @media (width < 1024px) {
+      gap: 1rem;
+    }
   }
   .poster {
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     &::before {
@@ -113,6 +115,10 @@ fieldset {
     font-size: 6rem;
     font-weight: 700;
     line-height: 5.6rem;
+    @media (width < 1024px) {
+      font-size: 4rem;
+      line-height: 1.3;
+    }
   }
   .ratings {
     display: flex;
@@ -132,6 +138,10 @@ fieldset {
     color: #fff;
     font-size: 1.8rem;
     font-weight: 500;
+    @media (width < 1024px) {
+      width: 100%;
+      font-size: 1.4rem;
+    }
   }
 
   .pagination {
@@ -141,6 +151,14 @@ fieldset {
     top: 50%;
     translate: 0 -50%;
     gap: 3rem;
+    @media (width < 1024px) {
+      display: flex;
+      justify-content: center;
+      right: 1rem;
+      left: 1rem;
+      top: initial;
+      bottom: 3rem;
+    }
     .item {
       position: relative;
       color: var(--gray-400, #9ca3af);
@@ -158,6 +176,11 @@ fieldset {
         background: #fff;
         transition: 0.4s;
         translate: -2.6rem -50%;
+        @media (width < 1024px) {
+          top: inherit;
+          bottom: -1.3rem;
+          translate: 0;
+        }
       }
     }
     .active {
@@ -186,6 +209,10 @@ fieldset {
     font-weight: 200;
     line-height: 2.4rem;
     text-align: center;
+    @media (width < 1024px) {
+      position: static;
+      margin-top: 5rem;
+    }
   }
 }
 
@@ -198,6 +225,9 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (width < 1024px) {
+      height: auto;
+    }
   }
 }
 @scope (.movie-detail) {
@@ -207,6 +237,9 @@ fieldset {
     gap: 6rem;
     color: #fff;
     margin-top: 4rem;
+    @media (width < 1024px) {
+      display: block;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -258,6 +291,10 @@ fieldset {
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
+    @media (width < 1024px) {
+      width: 100%;
+      display: block;
+    }
   }
   .hash {
     display: flex;
@@ -489,6 +526,7 @@ fieldset {
   aspect-ratio: 1;
   background: url(../images/ico_menu.svg) no-repeat center / contain;
   border: none;
+  cursor: pointer;
 }
 
 /* -------------------------------------------------------------------------- */

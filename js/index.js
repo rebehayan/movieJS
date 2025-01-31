@@ -5,15 +5,21 @@ import { MainSlide } from "./components/MainSlide.js";
 import { RenderFav } from "./components/RenderFav.js";
 import { About } from "./components/About.js";
 import { HTMLInclude } from "./utils/HTMLInclude.js";
+import { Megamenu } from "./components/Megamenu.js";
 
-const init = () => {
+const init = async () => {
+  await HTMLInclude("/include/MegaMenu.html", "#megamenu");
+  await Megamenu();
+
   Search();
   SearchResult();
   Detail();
   MainSlide();
   RenderFav();
   About();
-  HTMLInclude("/include/MegaMenu.html", "#megamenu");
 };
 
-HTMLInclude("/include/Header.html", ".header").then(() => init());
+(async () => {
+  await HTMLInclude("/include/Header.html", ".header");
+  await init();
+})();

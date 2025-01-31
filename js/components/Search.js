@@ -1,5 +1,5 @@
 export const Search = () => {
-  const search = document.querySelector(".search");
+  const search = document.querySelector("#search");
 
   if (!search) return;
 
