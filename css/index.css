@@ -23,6 +23,7 @@ html {
 }
 body {
   background-color: #222;
+  overflow-x: hidden;
 }
 fieldset {
   border: none;
@@ -61,32 +62,14 @@ fieldset {
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   Header                                   */
-/* -------------------------------------------------------------------------- */
-@scope (.header) {
-  :scope {
-    display: grid;
-    grid-template-columns: 23rem 1fr 23rem;
-    align-items: center;
-    position: fixed;
-    left: 50%;
-    top: 4.5rem;
-    z-index: 1000;
-    translate: -50%;
-  }
-  > div {
-    justify-self: end;
-    display: flex;
-    gap: 2rem;
-    a {
-      color: #fff;
-      font-size: 1.6rem;
-      font-weight: 700;
-      line-height: 2.4rem;
+.logo {
+  @media (width < 1024px) {
+    img {
+      width: 35vw;
     }
   }
 }
+
 /* -------------------------------------------------------------------------- */
 /*                                    Index                                   */
 /* -------------------------------------------------------------------------- */
@@ -326,47 +309,6 @@ fieldset {
     }
   }
 }
-/* -------------------------------------------------------------------------- */
-/*                                   Search                                   */
-/* -------------------------------------------------------------------------- */
-@scope (.search) {
-  :scope {
-    justify-self: center;
-    width: 52.5rem;
-    padding: 0 1rem;
-    border-radius: 0.6rem;
-    border: 2px solid var(--gray-300, #d1d5db);
-    &:has(input:focus) {
-      outline: 2px solid rgba(255, 255, 255, 0.2);
-      outline-offset: 5px;
-    }
-  }
-  fieldset {
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    align-items: center;
-  }
-  input {
-    color: var(--white, #fff);
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.4rem;
-    background-color: transparent;
-    border: none;
-    height: 2.4rem;
-    outline: 0;
-    &::placeholder {
-      color: inherit;
-    }
-  }
-  button {
-    width: 3.6rem;
-    aspect-ratio: 1;
-    background: url(../images/ico_search.svg) no-repeat center;
-    border: none;
-  }
-}
-
 @scope (.search-result) {
   :scope {
     display: grid;
@@ -541,6 +483,12 @@ fieldset {
       margin: 0;
     }
   }
+}
+.btn-menu {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  background: url(../images/ico_menu.svg) no-repeat center / contain;
+  border: none;
 }
 
 /* -------------------------------------------------------------------------- */

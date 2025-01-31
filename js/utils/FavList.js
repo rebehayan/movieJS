@@ -2,7 +2,12 @@
 /*                                 즐겨찾기 가지고오기                           */
 /* -------------------------------------------------------------------------- */
 export const GetFavList = () => {
-  return sessionStorage.getItem("favList").split(",");
+  const storage = sessionStorage.getItem("favList");
+  if (storage) {
+    return storage.split(",");
+  } else {
+    return [];
+  }
 };
 
 /* -------------------------------------------------------------------------- */

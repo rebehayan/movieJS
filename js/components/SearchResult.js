@@ -40,6 +40,7 @@ export const SearchResult = async () => {
       FavMovies(); //즐겨찾기등록
     } else {
       NoResultRender(".result-text", "no-result", "검색결과가 없습니다.");
+      console.log(response);
     }
   } catch (error) {
     console.log(error);
