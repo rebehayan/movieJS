@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Movie search results page." />
+    <title>검색결과</title>
+    <meta property="og:type" content="responsive, web, mobile" />
+    <meta property="og:site_name" content="SearchMovies" />
+    <meta property="og:title" content="first page" />
+    <meta property="og:description" content="You can search for movies." />
+    <meta property="og:image" content="페이지 대표이미지" />
+    <meta property="og:url" content="movie-js-nine.vercel.app/" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script type="module" src="../js/index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="검색결과" />
-  <title>검색결과</title>
-  <meta property="og:type" content="페이지유형" />
-  <meta property="og:site_name" content="사이트의 이름" />
-  <meta property="og:title" content="페이지 이름" />
-  <meta property="og:description" content="페이지 설명" />
-  <meta property="og:image" content="페이지 대표이미지" />
-  <meta property="og:url" content="페이지 주소" />
-  <link rel="stylesheet" href="../css/index.css" />
-  <script type="module" src="../js/index.js"></script>
-</head>
-
-<body>
-  <header class="header"></header>
-  <dialog id="megamenu"></dialog>
-  <main>
-    <div class="visual"></div>
-    <div class="result-text">
-      <div><strong></strong>에 대한 검색 결과입니다.</div>
-      <p>원하는 영화를 클릭하여 더 자세한 정보를 확인하세요.</p>
-    </div>
-    <button class="btn-prev" aria-label="이전으로"></button>
-    <ul class="search-result"></ul>
-  </main>
-  <footer class="footer">
-    @2025 Rebehayan.com All Right Reserves
-  </footer>
-</body>
-
+  <body>
+    <header class="header"></header>
+    <dialog id="megamenu"></dialog>
+    <main>
+      <div class="visual"></div>
+      <div class="result-text">
+        <div><strong></strong>에 대한 검색 결과입니다.</div>
+        <p>원하는 영화를 클릭하여 더 자세한 정보를 확인하세요.</p>
+      </div>
+      <div class="mx-auto">
+        <!-- <button class="btn-prev" aria-label="이전으로"></button> -->
+      </div>
+      <ul class="search-result"></ul>
+    </main>
+    <footer class="footer">@2025 Rebehayan.com All Right Reserves</footer>
+  </body>
 </html>

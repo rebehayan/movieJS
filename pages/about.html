@@ -1,130 +1,135 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This site is used as a lecture material. It contains more information." />
+    <title>ABOUT - SearchMovies</title>
+    <meta property="og:type" content="responsive, web, mobile" />
+    <meta property="og:site_name" content="SearchMovies" />
+    <meta property="og:title" content="first page" />
+    <meta property="og:description" content="You can search for movies." />
+    <meta property="og:image" content="페이지 대표이미지" />
+    <meta property="og:url" content="movie-js-nine.vercel.app/" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <script type="module" src="/js/index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="영화검색사이트">
-  <title>ABOUT - SearchMovies</title>
-  <meta property="og:type" content="페이지유형">
-  <meta property="og:site_name" content="사이트의 이름">
-  <meta property="og:title" content="페이지 이름">
-  <meta property="og:description" content="페이지 설명">
-  <meta property="og:image" content="페이지 대표이미지">
-  <meta property="og:url" content="페이지 주소">
-  <link rel="stylesheet" href="/css/index.css" />
-  <script type="module" src="/js/index.js"></script>
-</head>
-
-<body>
-  <header class="header"></header>
-  <dialog id="megamenu"></dialog>
-  <main>
-    <div class="about">
-      <div class="about-visual mxauto">
-        <div class="text">
-          <h2>
-            <span>Build</span>
-            <span>Educate</span>
-            <span>Inspire</span>
-          </h2>
-          <a href="mailto:rebehayan@gmail.com" data-tooltip="rebehayan@gmail.com"
-            class="btn-contact">강의문의<span>Go</span></a>
-        </div>
-        <div class="video">
-          <div data-title="Project">
-            <video src="../images/project.mp4" muted loop></video>
-            <div class="info">
-              Since 2000<br>
-              Project
-            </div>
-            <div class="count"><span><i>++</i>450</span>프로젝트 진행</div>
+  <body>
+    <header class="header"></header>
+    <dialog id="megamenu"></dialog>
+    <main>
+      <div class="about">
+        <div class="about-visual mxauto">
+          <div class="text">
+            <h2>
+              <span>Build</span>
+              <span>Educate</span>
+              <span>Inspire</span>
+            </h2>
+            <a href="mailto:rebehayan@gmail.com" data-tooltip="rebehayan@gmail.com" class="btn-contact">강의문의<span>Go</span></a>
           </div>
-          <div data-title="Educate">
-            <video src="../images/educate.mp4" muted loop></video>
-            <div class="info">
-              Since 2009<br>
-              Educate
+          <div class="video">
+            <div data-title="Project">
+              <video src="../images/project.mp4" muted loop></video>
+              <div class="info">
+                Since 2000<br />
+                Project
+              </div>
+              <div class="count">
+                <span><i>++</i>450</span>프로젝트 진행
+              </div>
             </div>
-            <div class="count"><span><i>++</i>100</span>강의 진행</div>
-          </div>
-          <div data-title="Inspire">
-            <video src="../images/youtube.mp4" muted loop></video>
-            <div class="info">
-              Since 2016<br>
-              Inspire
+            <div data-title="Educate">
+              <video src="../images/educate.mp4" muted loop></video>
+              <div class="info">
+                Since 2009<br />
+                Educate
+              </div>
+              <div class="count">
+                <span><i>++</i>100</span>강의 진행
+              </div>
             </div>
-            <div class="count"><span><i>++</i>790</span>유튜브 영상</div>
+            <div data-title="Inspire">
+              <video src="../images/youtube.mp4" muted loop></video>
+              <div class="info">
+                Since 2016<br />
+                Inspire
+              </div>
+              <div class="count">
+                <span><i>++</i>790</span>유튜브 영상
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="about-header">
-        <div>
-          <h2>About Us</h2>
-          <p>안녕하세요, <strong>리베하얀</strong>입니다.<br>
-            Javascript와 영화 API를 기반으로 제작한 간단한 영화 검색웹사이트를 구현했습니다.<br>
-            해당 사이트는 오프라인 강의 자료로서 활용되고 있으며<br>
-            검색 기능, 영화 상세 정보 제공, 즐겨찾기 등을 제공하고 있습니다.</p>
-        </div>
-      </div>
-      <div class="about-site">
-        <div>
-          <div class="top">
-            <div class="left">
-              Search your favorite movie<br>
-              Keep your favorite movies
-            </div>
-            <div class="right">
-              사용자가 손쉽게 영화를 검색하고 상세 정보를 확인할 수 있도록 설계되었습니다.<br>
-              "최신 영화, 인기 영화, 그리고 추천작을 손쉽게 찾아보세요."
-            </div>
+        <div class="about-header">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              안녕하세요, <strong>리베하얀</strong>입니다.<br />
+              Javascript와 영화 API를 기반으로 제작한 간단한 영화 검색웹사이트를 구현했습니다.<br />
+              해당 사이트는 오프라인 강의 자료로서 활용되고 있으며<br />
+              검색 기능, 영화 상세 정보 제공, 즐겨찾기 등을 제공하고 있습니다.
+            </p>
           </div>
-          <div class="btm">
-            <div class="left">
-              <div class="list">
-                <div>
-                  <h3>주요 기능</h3>
-                  <ul>
-                    <li><strong>검색 기능 </strong>: 원하는 영화를 검색</li>
-                    <li><strong>상세 정보 제공 </strong>: 줄거리, 감독, 배우 등 영화 데이터 제공</li>
-                    <li><strong>즐겨찾기 </strong>: 세션스토리지를 활용한 즐겨찾기</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3>개발자</h3>
-                  <ul>
-                    <li><strong>닉네임</strong>: 리베하얀</li>
-                    <li><strong>전문 분야</strong>: 웹퍼블리싱 및 프론트엔드 개발</li>
-                    <li><strong>특 징</strong>: 25년 경력의 웹 퍼블리셔</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3>강의</h3>
-                  <ul>
-                    <li>JavaScript 기반의 영화 사이트 제작 강의</li>
-                    <li>실무 활용도를 높이는 프로젝트 중심 강의</li>
-                    <li>직관적이고 사용하기 쉬운 Figma, Notion 강의 자료 제공</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3>기술 스택</h3>
-                  <div class="item-group">
-                    <div class="item">HTML</div>
-                    <div class="item">CSS</div>
-                    <div class="item">JavaScript</div>
-                    <div class="item">OMDB API</div>
+        </div>
+        <div class="about-site">
+          <div>
+            <div class="top">
+              <div class="left">
+                Search your favorite movie<br />
+                Keep your favorite movies
+              </div>
+              <div class="right">
+                사용자가 손쉽게 영화를 검색하고 상세 정보를 확인할 수 있도록 설계되었습니다.<br />
+                "최신 영화, 인기 영화, 그리고 추천작을 손쉽게 찾아보세요."
+              </div>
+            </div>
+            <div class="btm">
+              <div class="left">
+                <div class="list">
+                  <div>
+                    <h3>주요 기능</h3>
+                    <ul>
+                      <li><strong>검색 기능 </strong>: 원하는 영화를 검색</li>
+                      <li><strong>상세 정보 제공 </strong>: 줄거리, 감독, 배우 등 영화 데이터 제공</li>
+                      <li><strong>즐겨찾기 </strong>: 세션스토리지를 활용한 즐겨찾기</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>개발자</h3>
+                    <ul>
+                      <li><strong>닉네임</strong>: 리베하얀</li>
+                      <li><strong>전문 분야</strong>: 웹퍼블리싱 및 프론트엔드 개발</li>
+                      <li><strong>특 징</strong>: 25년 경력의 웹 퍼블리셔</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>강의</h3>
+                    <ul>
+                      <li>JavaScript 기반의 영화 사이트 제작 강의</li>
+                      <li>실무 활용도를 높이는 프로젝트 중심 강의</li>
+                      <li>직관적이고 사용하기 쉬운 Figma, Notion 강의 자료 제공</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>기술 스택</h3>
+                    <div class="item-group">
+                      <div class="item">HTML</div>
+                      <div class="item">CSS</div>
+                      <div class="item">JavaScript</div>
+                      <div class="item">OMDB API</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="right">
-              <img src="../images/rebehayan_profile.png" alt="리베하얀">
+              <div class="right">
+                <img src="../images/rebehayan_profile.png" alt="리베하얀" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>

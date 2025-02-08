@@ -15,7 +15,7 @@ const handleMoreButton = (response, keyword) => {
 
     if (!list) return;
 
-    list.insertAdjacentHTML("afterend", `<button class='btn-more'>더보기</button>`);
+    list.insertAdjacentHTML("afterend", `<button class='btn-more mx-auto'>More</button>`);
 
     const more = document.querySelector(".btn-more");
     more.addEventListener("click", async () => {
@@ -63,5 +63,7 @@ export const SearchResult = async () => {
   } finally {
     goBack(); // 뒤로가기
     LoadingEnd();
+
+    document.querySelector("title").textContent = `${obj.keyword} Result - SearchMovies`;
   }
 };

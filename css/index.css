@@ -70,6 +70,19 @@ fieldset {
   }
 }
 
+.mx-auto {
+  margin-inline: auto;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 Components                                 */
+/* -------------------------------------------------------------------------- */
+@scope (.heading) {
+  &.base {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+}
 /* -------------------------------------------------------------------------- */
 /*                                    Index                                   */
 /* -------------------------------------------------------------------------- */
@@ -438,6 +451,14 @@ fieldset {
     top: 1rem;
   }
 }
+@scope (.my-fav) {
+  :scope {
+    width: 160rem;
+    margin-inline: auto;
+    text-align: center;
+    padding-top: 30rem;
+  }
+}
 @scope (.result-text) {
   :scope {
     text-align: center;
@@ -488,7 +509,6 @@ fieldset {
 
 .btn-more {
   display: flex;
-  margin-inline: auto;
   margin-block: 2rem 5rem;
   border: none;
   align-items: center;
@@ -503,6 +523,9 @@ fieldset {
   font-weight: 700;
   line-height: 2.4rem;
   cursor: pointer;
+  @media (width < 1024px) {
+    margin-inline: auto;
+  }
   &::before {
     content: "";
     width: 2rem;
