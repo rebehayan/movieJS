@@ -7,6 +7,7 @@ import { UrlParams } from "../utils/UrlParams.js";
 export const Detail = async () => {
   const obj = UrlParams();
   const detail = document.querySelector(".movie-detail");
+  let movieTitle;
 
   if (!detail) return;
 
@@ -42,6 +43,7 @@ export const Detail = async () => {
 
     const posterBG = Poster === "N/A" ? "" : Poster.replace("300", "1200");
     const poster = Poster === "N/A" ? "" : Poster.replace("300", "600");
+    movieTitle = Title;
     const genreList = Genre.split(",")
       .map((item) => {
         return `<div>${item}</div>`;
@@ -83,5 +85,6 @@ export const Detail = async () => {
   } finally {
     goBack();
     FavMovies();
+    document.querySelector("title").textContent = `${movieTitle} Detail Information - SearchMovies`;
   }
 };
