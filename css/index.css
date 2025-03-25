@@ -18,6 +18,7 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -52,7 +53,7 @@ fieldset {
   }
 }
 
-:is(.mxauto, .header, .about-header > div, .detail-wrap, .main-slide .information, .search-result) {
+:is(.mxauto, .about-header > div, .detail-wrap, .main-slide .information, .search-result) {
   width: 160rem;
   margin-inline: auto;
   @media (width < 720px) {
@@ -199,9 +200,11 @@ fieldset {
 /* -------------------------------------------------------------------------- */
 @scope (.footer) {
   :scope {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     inset: auto 0 0;
-    padding-block: 3rem;
+    padding: 3rem 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     color: #ccc;
     text-align: center;
@@ -212,6 +215,24 @@ fieldset {
     @media (width < 1024px) {
       position: static;
       margin-top: 5rem;
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: #fff;
+        text-underline-offset: 0.4rem;
+        &:after {
+          content: "";
+          width: 1.7rem;
+          aspect-ratio: 1;
+          background: no-repeat center / contain;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20stroke%3D%22currentColor%22%20fill%3D%22white%22%20stroke-width%3D%220%22%20viewBox%3D%220%200%2024%2024%22%20height%3D%22200px%22%20width%3D%22200px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M6.99979%207V3C6.99979%202.44772%207.4475%202%207.99979%202H20.9998C21.5521%202%2021.9998%202.44772%2021.9998%203V16C21.9998%2016.5523%2021.5521%2017%2020.9998%2017H17V20.9925C17%2021.5489%2016.551%2022%2015.9925%2022H3.00728C2.45086%2022%202%2021.5511%202%2020.9925L2.00276%208.00748C2.00288%207.45107%202.4518%207%203.01025%207H6.99979ZM8.99979%207H15.9927C16.549%207%2017%207.44892%2017%208.00748V15H19.9998V4H8.99979V7ZM4.00255%209L4.00021%2020H15V9H4.00255Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+        }
+      }
     }
   }
 }
@@ -883,5 +904,15 @@ main {
         font-size: 4rem;
       }
     }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Fav list                                  */
+/* -------------------------------------------------------------------------- */
+.my-fav-list {
+  margin-top: 20rem;
+  @media (width < 720px) {
+    margin-top: 10rem;
   }
 }

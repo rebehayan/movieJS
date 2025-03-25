@@ -22,7 +22,6 @@ const handleMoreButton = (response, keyword) => {
       currentPage++;
 
       const response = await FetchTitle(keyword, currentPage);
-      console.log(response);
       RenderList(".search-result", response.Search); // 리스트 데이터바인딩
 
       // 전체 결과 개수보다 많아지면 버튼 숨김

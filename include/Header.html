@@ -71,7 +71,6 @@
   </style>
 </form>
 <div class="gnb">
-  <a href="/pages/about.html">About</a>
   <a href="/pages/fav.html">Favorites</a>
   <button class="btn-menu" aria-label="전체메뉴"></button>
 </div>
@@ -82,14 +81,21 @@
       grid-template-columns: 23rem 1fr 23rem;
       align-items: center;
       position: fixed;
-      left: 50%;
-      top: 4.5rem;
+      inset: 0 0 auto;
+      padding-block: 4.5rem;
       z-index: 1000;
-      translate: -50%;
+      padding-inline: calc((100% - 160rem) / 2);
+      transition: background 0.4s;
+      background: linear-gradient(black, rgba(0, 0, 0, 0)) no-repeat top / 100% 0;
+
+      &.fixed {
+        background-size: 100% 100%;
+      }
 
       @media (width < 1024px) {
         grid-template-columns: 1fr 1fr;
-        top: 2rem;
+        padding-block: 2rem;
+        padding-inline: 1rem;
       }
     }
   }
